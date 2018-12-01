@@ -13,6 +13,9 @@ $color_v3: #00ffff;
 $color_v4: #00ff00;
 $color_duration: 10s;
 
+$color: #111111;
+$color_secondary: #333333;
+
 /* BODY */
 
 body {
@@ -52,4 +55,99 @@ body {
   50%  {background: rgba($color: $color_v3, $alpha: $background_opacity);}
   75%  {background: rgba($color: $color_v4, $alpha: $background_opacity);}
   100% {background: rgba($color: $color_v1, $alpha: $background_opacity);}
+}
+
+/* HR */
+
+hr {
+  margin: 0 0 50px 0;
+  display: block;
+  border: none;
+  height: 1px;
+  animation: gradientchange $color_duration infinite;
+  -webkit-animation: gradientchange $color_duration infinite; /* Chrome and Safari */
+}
+
+@keyframes gradientchange
+{
+  0%   {background: linear-gradient(to right, $color_v1, $color, $color_secondary, $color, $color_v1);}
+  25%  {background: linear-gradient(to right, $color_v2, $color, $color_secondary, $color, $color_v2);}
+  50%  {background: linear-gradient(to right, $color_v3, $color, $color_secondary, $color, $color_v3);}
+  75%  {background: linear-gradient(to right, $color_v4, $color, $color_secondary, $color, $color_v4);}
+  100% {background: linear-gradient(to right, $color_v1, $color, $color_secondary, $color, $color_v1);}
+}
+
+@-webkit-keyframes gradientchange /* Safari and Chrome - necessary duplicate */
+{
+  0%   {background: linear-gradient(to right, $color_v1, $color, $color_secondary, $color, $color_v1);}
+  25%  {background: linear-gradient(to right, $color_v2, $color, $color_secondary, $color, $color_v2);}
+  50%  {background: linear-gradient(to right, $color_v3, $color, $color_secondary, $color, $color_v3);}
+  75%  {background: linear-gradient(to right, $color_v4, $color, $color_secondary, $color, $color_v4);}
+  100% {background: linear-gradient(to right, $color_v1, $color, $color_secondary, $color, $color_v1);}
+}
+
+/* BUTTON */
+
+@keyframes sheen
+{
+  0%    {transform: skewY(-45deg) translateX(0);}
+  100%  {transform: skewY(-45deg) translateX(12.5em);}
+}
+
+@-webkit-keyframes sheen  /* Safari and Chrome - necessary duplicate */
+{
+  0%    {transform: skewY(-45deg) translateX(0);}
+  100%  {transform: skewY(-45deg) translateX(12.5em);}
+}
+
+.button {
+  width: 6em;
+  margin: 1em;
+  padding: 0.75em 2em;
+  text-align: center;
+  text-decoration: none;
+  color: $color;
+  border: 2px solid $color;
+  font-size: 1.5em;
+  display: inline-block;
+  border-radius: 0.3em;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    background-color: rgba(255,255,255,0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -4.5em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
+  }
+
+  &:hover {
+    background-color: $color;
+    color: #fff;
+    border-bottom: 4px solid darken($color, 10%);
+
+    &:before {
+      transform: skewX(-45deg) translateX(13.5em);
+      transition: all 0.5s ease-in-out;
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .button {
+    width: 5.5em;
+    margin: 0.5em;
+    font-size: 1.3em;
+  }
+
 }
