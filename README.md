@@ -2,6 +2,9 @@
 
 **WIP**: Template of an interactive short film for being reproduced in a website.
 
+## Demo
+
+Demo available on the following [link](https://interactive-short.herokuapp.com/).
 
 ## Usage
 
@@ -33,6 +36,9 @@ ng serve
 
 > **Note**: Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Deployment
+
+Just push to `master` and it will be deploy automagically to Heroku (see this [tutorial](https://medium.com/@hellotunmbi/how-to-deploy-angular-application-to-heroku-1d56e09c5147) for knowing how to configure this).
 
 ## Development
 
