@@ -1,0 +1,20 @@
+/* CONTAINER */
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+  .container h1 {
+    font-size: 5em;
+    font-weight: bold;
+  }
+
+  .container h2 {
+    font-weight: normal;
+  }

@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'interactive-short';
+  title = 'Short title';
+  subtitle = 'An interactive short film by Albert Suarez';
 }
