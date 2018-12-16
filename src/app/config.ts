@@ -3,9 +3,9 @@
 export const title = 'Short title';
 export const subtitle = 'An interactive short film by Albert Suarez';
 export const question = 'How do you want to play?';
-export const individual_button = 'Individually';
-export const group_button = 'In group';
+export const individualButton = 'Individually';
+export const groupButton = 'In group';
 
-export const error_title = 'Ooops!';
-export const error_subtitle = 'Something went wrong.';
-export const error_button = 'Go home';
+export const errorTitle = 'Ooops!';
+export const errorSubtitle = 'Something went wrong.';
+export const errorButton = 'Go home';
