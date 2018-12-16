@@ -1,3 +1,5 @@
+[![BCH compliance](https://bettercodehub.com/edge/badge/AlbertSuarez/interactive-short?branch=master)](https://bettercodehub.com/)
+
 # Interactive Short
 
 **WIP**: Template of an interactive short film for being reproduced in a website.
