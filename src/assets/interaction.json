@@ -1,0 +1,8 @@
+{
+  "_comment": "This file must have an `init` for starting the short.",
+  "init": "A",
+  "A": [
+    "A1",
+    "A2"
+  ]
+}
