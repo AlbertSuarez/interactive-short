@@ -1,10 +1,16 @@
 {
-  "_comment": "This file must have an `init` for starting the short.",
+  "_comment": "This file must have an `init` for starting the short. Can't be more than 4 options per key.",
   "init": "A",
-  "A": {
-    "A1": "Apple",
-    "A2": "Pear"
-  },
+  "A": [
+    {
+      "key": "A1",
+      "value": "Apple"
+    },
+    {
+      "key": "A2",
+      "value": "Pear"
+    }
+  ],
   "A1": null,
   "A2": null
 }
