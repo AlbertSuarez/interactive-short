@@ -140,6 +140,13 @@ hr {
 
   }
 
+  &.fix {
+    background-color: $color;
+    color: #fff;
+    animation: opacitychange $opacity_duration;
+    -webkit-animation: opacitychange $opacity_duration;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
