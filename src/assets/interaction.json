@@ -3,12 +3,12 @@
   "init": "A",
   "A": [
     {
-      "key": "A1",
-      "value": "Apple"
+      "key": "A2",
+      "value": "Mug"
     },
     {
-      "key": "A2",
-      "value": "Pear"
+      "key": "A1",
+      "value": "Apple"
     }
   ],
   "A1": null,
