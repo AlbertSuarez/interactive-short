@@ -9,3 +9,5 @@ export const groupButton = 'In group';
 export const errorTitle = 'Ooops!';
 export const errorSubtitle = 'Something went wrong.';
 export const errorButton = 'Go home';
+
+export const serverUrl = 'https://video-stream-server.herokuapp.com/video?id=';
