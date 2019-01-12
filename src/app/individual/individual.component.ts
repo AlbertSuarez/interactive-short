@@ -27,15 +27,15 @@ export class IndividualComponent implements OnInit {
   private changeVideo(key: string) {
     $('.container').hide();
     this.interactionService.getInteractionJson().subscribe((data) => {
-      $('#video-player').attr('src', env.environment.server + key);
-      const videoPlayer: HTMLVideoElement = <HTMLVideoElement> $('#video-player')[0];
+      $('.video-player').attr('src', env.environment.server + key);
+      const videoPlayer: HTMLVideoElement = <HTMLVideoElement> $('.video-player')[0];
       videoPlayer.load();
 
       const nextOptions = data[key];
       if (!nextOptions) {
-        $('#video-player').unbind('ended').on('ended', this.showDone);
+        $('.video-player').unbind('ended').on('ended', this.showDone);
       } else {
-        $('#video-player').unbind('ended').on('ended', this.showOptions);
+        $('.video-player').unbind('ended').on('ended', this.showOptions);
         for (let i = 0; i < nextOptions.length; i++) {
           const buttonElement: HTMLAreaElement = <HTMLAreaElement> $('.options a').get(i);
           buttonElement.innerHTML = nextOptions[i].value;
