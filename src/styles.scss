@@ -220,3 +220,39 @@ hr {
     }
 
   }
+
+/* VIDEO */
+
+.video-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  background: black !important;
+}
+
+  .video-bg > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    #video-bg > video { height: 300%; top: -100%; }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    #video-bg > video { width: 300%; left: -100%; }
+  }
+
+  @supports (object-fit: cover) {
+    #video-bg > video {
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+  }
