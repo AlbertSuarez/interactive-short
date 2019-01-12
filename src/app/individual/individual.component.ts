@@ -13,44 +13,46 @@ import * as config from '../config';
 })
 export class IndividualComponent implements OnInit {
 
+  doneButtonText = config.doneButtonText;
+
   constructor(private interactionService: InteractionService) { }
 
   ngOnInit() {
-    this.start();
-    $('#video-player').on('ended', this.onFinishVideo);
-  }
-
-  private start() {
     this.interactionService.getInteractionJson().subscribe((data) => {
-      // Set video source
-      const initId = data.init;
-      $('#video-player').attr('src', config.serverUrl + initId);
-      const videoPlayer: HTMLVideoElement = <HTMLVideoElement> $('#video-player')[0];
-      videoPlayer.load();
-
-      // Set buttons text
-      const initOptions = data[initId];
-      for (let i = 0; i < initOptions.length; i++) {
-        const buttonElement: HTMLAreaElement = <HTMLAreaElement> $('.container a').get(i);
-        buttonElement.innerHTML = initOptions[i].value;
-        buttonElement.addEventListener('click', (e: Event) => this.changeVideo(initOptions[i].key));
-      }
+      this.changeVideo(data.init);
     });
   }
 
   private changeVideo(key: string) {
     $('.container').hide();
+    this.interactionService.getInteractionJson().subscribe((data) => {
+      $('#video-player').attr('src', config.serverUrl + key);
+      const videoPlayer: HTMLVideoElement = <HTMLVideoElement> $('#video-player')[0];
+      videoPlayer.load();
 
-    // Set video source
-    $('#video-player').attr('src', config.serverUrl + key);
-    const videoPlayer: HTMLVideoElement = <HTMLVideoElement> $('#video-player')[0];
-    videoPlayer.load();
-
-    return null;
+      const nextOptions = data[key];
+      if (!nextOptions) {
+        $('#video-player').unbind('ended').on('ended', this.showDone);
+      } else {
+        $('#video-player').unbind('ended').on('ended', this.showOptions);
+        for (let i = 0; i < nextOptions.length; i++) {
+          const buttonElement: HTMLAreaElement = <HTMLAreaElement> $('.options a').get(i);
+          buttonElement.innerHTML = nextOptions[i].value;
+          buttonElement.addEventListener('click', (e: Event) => this.changeVideo(nextOptions[i].key), {'once': true});
+        }
+      }
+    });
+    return false;
   }
 
-  private onFinishVideo() {
-    $('.container').removeAttr('hidden');
+  private showOptions() {
+    $('.options').show();
+    return false;
+  }
+
+  private showDone() {
+    $('.done').show();
+    return false;
   }
 
 }
