@@ -140,7 +140,7 @@ hr {
 
   }
 
-  &.fix {
+  &.fixed {
     background-color: $color;
     color: #fff;
     animation: opacitychange $opacity_duration;

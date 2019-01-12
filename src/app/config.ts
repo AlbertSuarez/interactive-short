@@ -10,4 +10,4 @@ export const errorTitle = 'Ooops!';
 export const errorSubtitle = 'Something went wrong.';
 export const errorButton = 'Go home';
 
-export const serverUrl = 'https://video-stream-server.herokuapp.com/video?id=';
+export const doneButtonText = 'Return';
