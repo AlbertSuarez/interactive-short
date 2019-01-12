@@ -3,6 +3,7 @@ import * as $ from 'jquery';
 
 import { InteractionService } from '../interaction.service';
 import * as config from '../config';
+import * as env from '../../environments/environment';
 
 
 @Component({
@@ -26,7 +27,7 @@ export class IndividualComponent implements OnInit {
   private changeVideo(key: string) {
     $('.container').hide();
     this.interactionService.getInteractionJson().subscribe((data) => {
-      $('#video-player').attr('src', config.serverUrl + key);
+      $('#video-player').attr('src', env.environment.server + key);
       const videoPlayer: HTMLVideoElement = <HTMLVideoElement> $('#video-player')[0];
       videoPlayer.load();
 
