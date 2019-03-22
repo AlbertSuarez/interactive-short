@@ -1,0 +1,14 @@
+version: '3'
+services:
+  interactive-short:
+    image: interactive-short
+    container_name: interactive-short
+    build:
+      context: web
+      dockerfile: Dockerfile
+    volumes:
+      - ./web:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - 4200:4200
+    restart: "always"
