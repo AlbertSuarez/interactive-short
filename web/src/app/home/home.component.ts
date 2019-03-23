@@ -11,8 +11,7 @@ export class HomeComponent implements OnInit {
   title = config.title;
   subtitle = config.subtitle;
   question = config.question;
-  individualButton = config.individualButton;
-  groupButton = config.groupButton;
+  playButton = config.playButton;
 
   constructor() { }
 
