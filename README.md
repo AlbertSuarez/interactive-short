@@ -1,81 +1,27 @@
-[![BCH compliance](https://bettercodehub.com/edge/badge/AlbertSuarez/interactive-short?branch=master)](https://bettercodehub.com/)
-
 # Interactive Short
 
-**WIP**: Template of an interactive short film for being reproduced in a website.
+Template of an interactive short film for being reproduced in a website getting videos from a streaming server.
 
-## Demo
+## Requirements
 
-Demo available on the following [link](https://interactive-short.herokuapp.com/).
+1. docker-compose
 
 ## Usage
 
-### Install dependencies
+To run the whole stack, please execute the following from the root directory:
 
-Run the following command to install dependencies.
+1. Run the server as a docker container with docker-compose
 
-```bash
-npm install
-```
+    ```bash
+    docker-compose up -d --build
+    ```
 
-### Build
+> **Note**: Navigate to `http://localhost:4200/`.
 
-Run the following command to build the project. The build artifacts will be stored in the `dist/` directory.
+## Authors
 
-```bash
-ng build
-```
-
-> **Note**: Use the `--prod` flag for a production build.
-
-### Run
-
-Run the following command for a dev server. 
-
-```bash
-ng serve
-```
-
-> **Note**: Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Deployment
-
-Just push to `master` and it will be deploy automagically to Heroku (see this [tutorial](https://medium.com/@hellotunmbi/how-to-deploy-angular-application-to-heroku-1d56e09c5147) for knowing how to configure this).
-
-## Development
-
-### Code scaffolding
-
-Run the following command to generate a new component.
-
-```bash
-ng generate component component-name
-```
-
-You can also use
-
-```bash
-ng generate directive|pipe|service|class|guard|interface|enum|module
-```
-
-## Tests
-
-### Running unit tests
-
-Run the following command to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-```bash
-ng test
-```
-
-### Running end-to-end tests
-
-Run the following command to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-```bash
-ng e2e
-```
+- [Albert Suàrez](https://github.com/AlbertSuarez)
 
 ## License
 
-MIT © Albert Suarez
+Apache-2.0 © Albert Suarez
