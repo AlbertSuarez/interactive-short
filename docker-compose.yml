@@ -1,14 +1,40 @@
-version: '3'
+version: '3.5'
+
 services:
-  interactive-short:
-    image: interactive-short
-    container_name: interactive-short
+  
+  interactive_short_web:
+    image: interactive_short_web
+    container_name: interactive_short_web
     build:
       context: web
       dockerfile: Dockerfile
     volumes:
       - ./web:/usr/src/app
       - /usr/src/app/node_modules
+    networks:
+      - interactive_short
     ports:
       - 4200:4200
     restart: "always"
+    depends_on:
+      - interactive_short_server
+  
+  interactive_short_server:
+    image: interactive_short_server
+    container_name: interactive_short_server
+    build:
+      context: server
+      dockerfile: Dockerfile
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - interactive_short
+    ports:
+      - 8080:8080
+    restart: "always"
+
+networks:
+  interactive_short:
+    name: interactive_short
+    driver: bridge
