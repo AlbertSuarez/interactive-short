@@ -1,25 +1,29 @@
-[![BCH compliance](https://bettercodehub.com/edge/badge/AlbertSuarez/video-stream-server?branch=master)](https://bettercodehub.com/)
+# Interactive Short: Server
 
-# Video stream server
+Server for getting videos in stream given an identifier.
 
-**WIP**: Server for getting videos in stream given an identifier.
+## Requirements
+
+1. NodeJS 9.6.1+
 
 ## Usage
 
-### Install dependencies
+To run the server, please execute the following from the root directory:
 
-Run the following command to install dependencies.
+1. Install dependencies.
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
-### Run
+2. Run a server. 
 
-Run the following command for a server. 
+    ```bash
+    npm start
+    ```
 
-```bash
-npm start
-```
+> **Note**: Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
 
-> **Note**: Navigate to `http://localhost:3000/`. The app will automatically reload if you change any of the source files.
+## License
+
+Apache-2.0 © Albert Suarez

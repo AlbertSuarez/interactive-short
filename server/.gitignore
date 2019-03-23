@@ -63,5 +63,7 @@ typings/
 # Output package.json
 package-lock.json
 
-# DS Store
-.DS_Store
+# Video
+*.MOV
+*.avi
+*.mp4
