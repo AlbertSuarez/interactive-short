@@ -22,7 +22,7 @@ To run the whole stack, please execute the following from the root directory:
     docker-compose up -d --build
     ```
 
-> **Note**: Navigate to `http://localhost:4200/`.
+> **Note**: Navigate to `http://localhost:80/`.
 
 ## Use for your organization
 
