@@ -7,12 +7,12 @@ import * as env from '../../environments/environment';
 
 
 @Component({
-  selector: 'app-individual',
-  templateUrl: './individual.component.html',
-  styleUrls: ['./individual.component.scss'],
+  selector: 'app-play',
+  templateUrl: './play.component.html',
+  styleUrls: ['./play.component.scss'],
   providers: [InteractionService]
 })
-export class IndividualComponent implements OnInit {
+export class PlayComponent implements OnInit {
 
   doneButtonText = config.doneButtonText;
 

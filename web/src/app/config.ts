@@ -3,8 +3,7 @@
 export const title = 'Short title';
 export const subtitle = 'An interactive short film by Albert Suarez';
 export const question = 'How do you want to play?';
-export const individualButton = 'Individually';
-export const groupButton = 'In group';
+export const playButton = 'Play';
 
 export const errorTitle = 'Ooops!';
 export const errorSubtitle = 'Something went wrong.';
