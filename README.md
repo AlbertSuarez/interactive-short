@@ -2,6 +2,12 @@
 
 Template of an interactive short film for being reproduced in a website getting videos from a streaming server.
 
+## Features
+
+- Easy interaction management
+- Streamed videos
+- Easy design customization
+
 ## Requirements
 
 1. docker-compose
@@ -17,6 +23,11 @@ To run the whole stack, please execute the following from the root directory:
     ```
 
 > **Note**: Navigate to `http://localhost:4200/`.
+
+## Use for your organization
+
+- Fork this repository
+- Personalize
 
 ## Authors
 
