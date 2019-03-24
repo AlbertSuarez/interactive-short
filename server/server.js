@@ -51,5 +51,5 @@ app.get('/video', function(req, res) {
 })
 
 app.listen(process.env.PORT || 8080, function() {
-  console.log('[Video Stream Server] Listening on port 8080!')
+  console.log('[Video Stream Server] Listening...')
 });

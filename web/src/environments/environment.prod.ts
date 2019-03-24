@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  server: 'https://video-stream-server.herokuapp.com/video?id='
+  server: 'http://35.190.219.199:443/video?id='
 };
