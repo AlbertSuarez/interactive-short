@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  server: 'http://interactive_short_server:8080/video?id='
+  server: 'http://localhost:8080/video?id='
 };
 
 /*
